@@ -4,11 +4,13 @@ use crate::Solution;
 pub struct Day1 {}
 
 impl Solution for Day1 {
-    fn solve_part_1(&self, input: &Vec<String>) -> i32 {
+    fn solve_part_1(&self, input: &String) -> i32 {
         let mut max = 0;
         let mut calories = 0;
 
-        for line in input {
+        let lines = input.split("\n");
+
+        for line in lines {
             if line == "" {
                 max = compare_one(max, calories);
                 calories = 0
@@ -21,11 +23,13 @@ impl Solution for Day1 {
         return max;
     }
 
-    fn solve_part_2(&self, input: &Vec<String>) -> i32 {
+    fn solve_part_2(&self, input: &String) -> i32 {
         let mut maximums = vec![0; 3];
         let mut calories = 0;
 
-        for line in input {
+        let lines = input.split("\n");
+
+        for line in lines {
             if line == "" {
                 maximums = compare_multiple(maximums, calories);
                 calories = 0

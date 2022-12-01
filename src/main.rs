@@ -1,4 +1,4 @@
-mod aoc;
+mod input;
 mod puzzles;
 mod solutions;
 
@@ -33,8 +33,8 @@ fn main() {
         }
     };
 
-    let example_input = aoc::get_test_input(id);
-    let input = aoc::get_input(id);
+    let example_input = input::get_test_input(id);
+    let input = input::get_input(id);
 
     let mut result_1 = 0;
     let mut result_2 = 0;
@@ -57,6 +57,6 @@ fn main() {
 }
 
 pub trait Solution {
-    fn solve_part_1(&self, input: &Vec<String>) -> i32;
-    fn solve_part_2(&self, input: &Vec<String>) -> i32;
+    fn solve_part_1(&self, input: &String) -> i32;
+    fn solve_part_2(&self, input: &String) -> i32;
 }

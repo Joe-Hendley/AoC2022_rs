@@ -4,7 +4,7 @@ mod solutions;
 
 use std::{env, process};
 
-const LATEST_ID: i32 = 1;
+const LATEST_ID: i32 = 3;
 
 fn main() {
     let args: Vec<String> = env::args().collect();

@@ -22,7 +22,7 @@ pub fn get_test_input(id: i32) -> String {
     let _result = match extract_input(&filepath) {
         Ok(test_input) => return test_input,
         Err(_error) => {
-            print!("couldn't find test input at: {}", filepath);
+            print!("couldn't find test input at: {}\n", filepath);
             return String::from("");
         }
     };
@@ -33,7 +33,7 @@ pub fn get_input(id: i32) -> String {
     let _result = match extract_input(&filepath) {
         Ok(input) => return input,
         Err(_error) => {
-            print!("couldn't find input at: {}", filepath);
+            print!("couldn't find input at: {}\n", filepath);
             return String::from("");
         }
     };

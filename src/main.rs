@@ -4,7 +4,7 @@ mod solutions;
 
 use std::{env, process};
 
-const LATEST_ID: i32 = 3;
+const LATEST_ID: i32 = 4;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -47,11 +47,15 @@ fn main() {
     }
 
     if input.len() > 0 {
-        if result_1 != 0 {
+        if result_1 == puzzle.part_one_example {
             println!("part 1 result: {}", puzzle.solution.solve_part_1(&input))
+        } else {
+            println!("part 1 got: {} want: {}", result_1, puzzle.part_one_example)
         }
-        if result_2 != 0 {
+        if result_2 == puzzle.part_two_example {
             println!("part 2 result: {}", puzzle.solution.solve_part_2(&input))
+        } else {
+            println!("part 2 got: {} want: {}", result_1, puzzle.part_two_example)
         }
     }
 }

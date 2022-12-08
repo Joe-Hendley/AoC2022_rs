@@ -1,6 +1,6 @@
 use std::error::Error;
 
-use crate::solutions::{day1, day2, day3};
+use crate::solutions::{day1, day2, day3, day4};
 use crate::Solution;
 
 pub struct Puzzle {
@@ -15,6 +15,7 @@ pub fn get_puzzle(id: i32) -> Result<Puzzle, Box<dyn Error>> {
         1 => Ok(one()),
         2 => Ok(two()),
         3 => Ok(three()),
+        4 => Ok(four()),
         _ => Err("invalid puzzle".into()),
     };
 }
@@ -43,5 +44,14 @@ fn three() -> Puzzle {
         part_one_example: 157,
         part_two_example: 70,
         solution: Box::new(day3::Day3 {}),
+    };
+}
+
+fn four() -> Puzzle {
+    return Puzzle {
+        id: 4,
+        part_one_example: 2,
+        part_two_example: 4,
+        solution: Box::new(day4::Day4 {}),
     };
 }
